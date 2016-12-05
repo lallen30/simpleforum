@@ -32,7 +32,7 @@
           <ul class="nav navbar-nav navbar-right">
             <li class="active"><a href="index.php">Home</a></li>
             <li><a href="register.php">Create An Account</a></li>
-            <li><a href="create.php">Create Topic</a></li>
+            <li><a href="create.php">Create post</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

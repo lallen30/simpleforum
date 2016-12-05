@@ -21,7 +21,7 @@
 <div class="block">
 <h3>Categories</h3>
 <div class="list-group">
-<a href="#" class="list-group-item active">All Topics <span class="badge pull-right">14</span></a>
+<a href="#" class="list-group-item active">All posts <span class="badge pull-right">14</span></a>
 <a href="#" class="list-group-item">Design<span class="badge pull-right">4</span></a>
 <a href="#" class="list-group-item">Development<span class="badge pull-right">9</span></a>
 <a href="#" class="list-group-item">Business & Marketing <span class="badge pull-right">12</span></a>
