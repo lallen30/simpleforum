@@ -5,14 +5,16 @@
         <li class="post">
             <div class="row">
                 <div class="col-md-2">
-                  <img class="avatar pull-left" src="img/profilepic.jpg" />
+                  <img class="avatar pull-left" src="img/<?php echo $post->profilepic; ?>" />
                 </div>
                 <div class="col-md-10">
                      <div class="post-content pull-right">
                         <h3><a href="post.php"><?php echo $post->title; ?></a></h3>
                         <div class="post-info">
-                          <a href="category.html">Development</a> >> <a href="profile.html">BradT81</a> >> Posted on: June 12, 2014
-                          <span class="badge pull-right">3</span>
+                          <a href="category.html?cateory=<?php echo urlFormat($post->category_id); ?>"><?php echo $post->name; ?></a> >>
+                           <a href="profile.html?user=<?php echo $post->user_id; ?>"><?php echo $post->username; ?></a> >>
+                           Posted on: <?php echo formatDate($post->create_date); ?>
+                          <span class="badge pull-right"><?php echo replyCount($post->id); ?></span>
                         </div>
                      </div>
                 </div>
