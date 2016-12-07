@@ -5,7 +5,7 @@
         <li class="post">
             <div class="row">
                 <div class="col-md-2">
-                  <img class="avatar pull-left" src="img/<?php echo $post->profilepic; ?>" />
+                  <img class="profilepic pull-left" src="img/<?php echo $post->profilepic; ?>" />
                 </div>
                 <div class="col-md-10">
                      <div class="post-content pull-right">

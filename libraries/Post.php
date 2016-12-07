@@ -32,7 +32,7 @@ class Post{
 	 * Get Posts By Category
 	 */
 	public function getByCategory($category_id){
-		$this->db->query("SELECT posts.*, categories.*, users.username, users.avatar FROM posts
+		$this->db->query("SELECT posts.*, categories.*, users.username, users.profilepic FROM posts
 						INNER JOIN categories
 						ON posts.category_id = categories.id
 						INNER JOIN users
@@ -51,7 +51,7 @@ class Post{
 	 * Get Posts By Username
 	 */
 	public function getByUser($user_id){
-		$this->db->query("SELECT posts.*, categories.*, users.username, users.avatar FROM posts
+		$this->db->query("SELECT posts.*, categories.*, users.username, users.profilepic FROM posts
 						INNER JOIN categories
 						ON posts.category_id = categories.id
 						INNER JOIN users
@@ -111,7 +111,7 @@ class Post{
 	 * Get Post By ID
 	 */
 	public function getPost($id){
-		$this->db->query("SELECT posts.*, users.username, users.name, users.avatar FROM posts
+		$this->db->query("SELECT posts.*, users.username, users.name, users.profilepic FROM posts
 						INNER JOIN users
 						ON posts.user_id = users.id
 						WHERE posts.id = :id

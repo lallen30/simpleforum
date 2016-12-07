@@ -8,6 +8,8 @@ $template = new Template('templates/frontpage.php');
 
 // Assign Variables
 $template->posts = $post->getAllPosts();
+$template->totalPosts = $post->gettotalPosts();
+$template->totalCategories = $post->getTotalCategories();
 
 //Display template
 echo $template;

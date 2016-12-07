@@ -52,7 +52,7 @@
 						<div class="row">
 							<div class="col-md-2">
 								<div class="user-info">
-									<img class="avatar pull-left" src="img/gravatar.jpg" />
+									<img class="profilepic pull-left" src="img/grprofilepic.jpg" />
 									<ul>
 										<li><strong>BradT81</strong></li>
 										<li>43 Posts</li>
@@ -72,7 +72,7 @@
 						<div class="row">
 							<div class="col-md-2">
 								<div class="user-info">
-									<img class="avatar pull-left" src="img/gravatar.jpg" />
+									<img class="profilepic pull-left" src="img/grprofilepic.jpg" />
 									<ul>
 										<li><strong>BradT81</strong></li>
 										<li>43 Posts</li>
@@ -96,7 +96,7 @@ I like to check out tutorials on how to implement the newest within html/css (ht
 						<div class="row">
 							<div class="col-md-2">
 								<div class="user-info">
-									<img class="avatar pull-left" src="img/gravatar.jpg" />
+									<img class="profilepic pull-left" src="img/grprofilepic.jpg" />
 									<ul>
 										<li><strong>BradT81</strong></li>
 										<li>43 Posts</li>
@@ -116,7 +116,7 @@ I like to check out tutorials on how to implement the newest within html/css (ht
 						<div class="row">
 							<div class="col-md-2">
 								<div class="user-info">
-									<img class="avatar pull-left" src="img/gravatar.jpg" />
+									<img class="profilepic pull-left" src="img/grprofilepic.jpg" />
 									<ul>
 										<li><strong>BradT81</strong></li>
 										<li>43 Posts</li>
@@ -135,7 +135,7 @@ I like to check out tutorials on how to implement the newest within html/css (ht
 						<div class="row">
 							<div class="col-md-2">
 								<div class="user-info">
-									<img class="avatar pull-left" src="img/gravatar.jpg" />
+									<img class="profilepic pull-left" src="img/grprofilepic.jpg" />
 									<ul>
 										<li><strong>BradT81</strong></li>
 										<li>43 Posts</li>
