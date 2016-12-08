@@ -9,7 +9,7 @@
                 </div>
                 <div class="col-md-10">
                      <div class="post-content pull-right">
-                        <h3><a href="post.php"><?php echo $post->title; ?></a></h3>
+                        <h3><a href="posts.php?id=<?php echo $post->id; ?>"><?php echo $post->title; ?></a></h3>
                         <div class="post-info">
                           <a href="category.html?cateory=<?php echo urlFormat($post->category_id); ?>"><?php echo $post->name; ?></a> >>
                            <a href="profile.html?user=<?php echo $post->user_id; ?>"><?php echo $post->username; ?></a> >>

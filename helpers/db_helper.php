@@ -25,3 +25,29 @@ function getCategories(){
 
     return $results;
 }
+
+
+/*
+ * USer post
+ */
+function userPostCount($user_id){
+    $db = new Datebase;
+    $db->query('SELECT * FROM posts
+                WHERE user_id = :user_id
+                ');
+    $db->bind(':user_id', $user_id);
+    //Assign Rows
+    $rows =$db->resultset();
+    //Get Count
+    $post_count = $db->rowCount();
+
+    $db->query('SELECT * FROM replies
+                WHERE user_id = :user_id
+                ');
+    $db->bind(':user_id', $user_id);
+    //Assing Rows
+    $rows =$db->resultset();
+    //Get Count
+    $reply_count = $db->rowCount();
+    return $post_count + $reply_count;
+}
