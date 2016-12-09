@@ -31,7 +31,7 @@ function getCategories(){
  * USer post
  */
 function userPostCount($user_id){
-    $db = new Datebase;
+    $db = new Database;
     $db->query('SELECT * FROM posts
                 WHERE user_id = :user_id
                 ');

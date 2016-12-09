@@ -12,7 +12,7 @@ $template = new Template('templates/post.php');
 
 // Assign Template Variable
     $template->post = $post->getPost($post_id);
-    $template->replies = $post->getPost($post_id);
+    $template->replies = $post->getReplies($post_id);
     $template->title = $post->getPost($post_id)->title;
 
 //Display template
