@@ -53,3 +53,4 @@
                   <h4 class="pull-right">A simple forum built with php</h4>
                   <div class="clearfix"></div>
                   <hr>
+                  <?php displayMessage(); ?>
