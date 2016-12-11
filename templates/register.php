@@ -18,8 +18,8 @@
         <input type="password" class="form-control" name="password" id="password" placeholder="Password">
       </div>
       <div class="form-group">
-        <label for="confirmpassword">Confirm Password*</label>
-        <input type="confirmpassword" class="form-control" name="confirmpassword" id="confirmpassword" placeholder="Confirm Password">
+        <label for="password2">Confirm Password*</label>
+        <input type="password2" class="form-control" name="password2" id="confirmpassword" placeholder="Confirm Password">
       </div>
       <div class="form-group">
         <label for="avatar">Upload Profile Pic</label>
