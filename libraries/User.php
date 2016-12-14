@@ -80,6 +80,15 @@ class User{
 			return true;
 	   }
 
+	   /*
+	    * Get Total # of Users
+		*/
+		public function getTotalUsers(){
+			$this->db->query('SELECT * FROM users');
+			$rows = $this->db->resultset();
+			return $this->db->rowCount();
+		}
+
 	/*
 	 * Upload User Avatar
 	 */

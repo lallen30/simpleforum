@@ -27,8 +27,8 @@
     </ul>
       <h3>Forum Statistics</h3>
     <ul>
-      <li>Total Number of Users: <strong>52</strong></li>
-      <li>Total Number of posts: <strong>10</strong></li>
-      <li>Total Number of Categories: <strong>5</strong></li>
+      <li>Total Number of Users: <strong><?php echo $totalUsers; ?></strong></li>
+      <li>Total Number of posts: <strong><?php echo $totalPosts; ?></strong></li>
+      <li>Total Number of Categories: <strong><?php echo $totalCategories; ?></strong></li>
     </ul>
 <?php include('includes/footer.php'); ?>
