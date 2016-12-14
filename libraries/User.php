@@ -69,6 +69,17 @@ class User{
 		  $_SESSION['name'] = $row->name;
 	  }
 
+	  /*
+	   * User Logout
+	   */
+	   public function logout(){
+		   	unset($_SESSION['is_logged_in']);
+			unset($_SESSION['user_id']);
+			unset($_SESSION['username']);
+			unset($_SESSION['name']);
+			return true;
+	   }
+
 	/*
 	 * Upload User Avatar
 	 */
