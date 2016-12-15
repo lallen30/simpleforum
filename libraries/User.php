@@ -16,11 +16,11 @@ class User{
 	public function register($data){
 			//Insert Query
 			$this->db->query('INSERT INTO users (name, email, profilepic, username, password, about, last_activity)
-											VALUES (:name, :email, :avatar, :username, :password, :about, :last_activity)');
+											VALUES (:name, :email, :profilepic, :username, :password, :about, :last_activity)');
 			//Bind Values
 			$this->db->bind(':name', $data['name']);
 			$this->db->bind(':email', $data['email']);
-			$this->db->bind(':avatar', $data['avatar']);
+			$this->db->bind(':profilepic', $data['profilepic']);
 			$this->db->bind(':username', $data['username']);
 			$this->db->bind(':password', $data['password']);
 			$this->db->bind(':about', $data['about']);
@@ -90,28 +90,28 @@ class User{
 		}
 
 	/*
-	 * Upload User Avatar
+	 * Upload User profilepic
 	 */
-	public function uploadAvatar(){
+	public function uploadprofilepic(){
 		$allowedExts = array("gif", "jpeg", "jpg", "png");
-		$temp = explode(".", $_FILES["avatar"]["name"]);
+		$temp = explode(".", $_FILES["profilepic"]["name"]);
 		$extension = end($temp);
-		if ((($_FILES["avatar"]["type"] == "image/gif")
-				|| ($_FILES["avatar"]["type"] == "image/jpeg")
-				|| ($_FILES["avatar"]["type"] == "image/jpg")
-				|| ($_FILES["avatar"]["type"] == "image/pjpeg")
-				|| ($_FILES["avatar"]["type"] == "image/x-png")
-				|| ($_FILES["avatar"]["type"] == "image/png"))
-				&& ($_FILES["avatar"]["size"] < 100000)
+		if ((($_FILES["profilepic"]["type"] == "image/gif")
+				|| ($_FILES["profilepic"]["type"] == "image/jpeg")
+				|| ($_FILES["profilepic"]["type"] == "image/jpg")
+				|| ($_FILES["profilepic"]["type"] == "image/pjpeg")
+				|| ($_FILES["profilepic"]["type"] == "image/x-png")
+				|| ($_FILES["profilepic"]["type"] == "image/png"))
+				&& ($_FILES["profilepic"]["size"] < 100000)
 				&& in_array($extension, $allowedExts)) {
-			if ($_FILES["avatar"]["error"] > 0) {
-				redirect('register.php', $_FILES["avatar"]["error"], 'error');
+			if ($_FILES["profilepic"]["error"] > 0) {
+				redirect('register.php', $_FILES["profilepic"]["error"], 'error');
 			} else {
-				if (file_exists("images/avatars/" . $_FILES["avatar"]["name"])) {
+				if (file_exists("images/avatars/" . $_FILES["profilepic"]["name"])) {
 					redirect('register.php', 'File already exists', 'error');
 				} else {
-					move_uploaded_file($_FILES["avatar"]["tmp_name"],
-					"images/avatars/" . $_FILES["avatar"]["name"]);
+					move_uploaded_file($_FILES["profilepic"]["tmp_name"],
+					"images/avatars/" . $_FILES["profilepic"]["name"]);
 
 					return true;
 				}

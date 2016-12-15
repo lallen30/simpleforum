@@ -142,4 +142,43 @@ class Post{
 		return $results;
 	}
 
+	/*
+	 * Create post
+	*/
+	public function create($data){
+		//Insert Query
+		$this->db->query("INSERT INTO posts (category_id, user_id, title, body,last_activity)
+											VALUES (:category_id, :user_id, :title,:body,:last_activity)");
+		//Bind Values
+		$this->db->bind(':category_id', $data['category_id']);
+		$this->db->bind(':user_id', $data['user_id']);
+		$this->db->bind(':title', $data['title']);
+		$this->db->bind(':body', $data['body']);
+		$this->db->bind(':last_activity', $data['last_activity']);
+		//Execute
+		if($this->db->execute()){
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+    /*
+	 * Add Reply
+	 */
+	public function reply($data){
+		//Insert Query
+		$this->db->query("INSERT INTO replies (post_id, user_id, body)
+											VALUES (:post_id, :user_id, :body)");
+		//Bind Values
+		$this->db->bind(':post_id', $data['post_id']);
+		$this->db->bind(':user_id', $data['user_id']);
+		$this->db->bind(':body', $data['body']);
+		//Execute
+		if($this->db->execute()){
+			return true;
+		} else {
+			return false;
+		}
+	}
 }

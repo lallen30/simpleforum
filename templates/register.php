@@ -22,8 +22,8 @@
         <input type="password2" class="form-control" name="password2" id="confirmpassword" placeholder="Confirm Password">
       </div>
       <div class="form-group">
-        <label for="avatar">Upload Profile Pic</label>
-        <input type="file" id="avatar" name="avatar">
+        <label for="profilepic">Upload Profile Pic</label>
+        <input type="file" id="profilepic" name="profilepic">
         <p class="help-block">Example block-level help text here.</p>
       </div>
       <div class="form-group">

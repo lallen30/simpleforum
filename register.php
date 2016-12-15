@@ -27,11 +27,11 @@ if(isset($_POST['register'])){
 	if($validate->isRequired($field_array)){
 		if($validate->isValidEmail($data['email'])){
 			if($validate->passwordsMatch($data['password'],$data['password2'])){
-					//Upload Avatar Image
-					if($user->uploadAvatar()){
-						$data['avatar'] = $_FILES["avatar"]["name"];
+					//Upload profilepic Image
+					if($user->uploadprofilepic()){
+						$data['profilepic'] = $_FILES["profilepic"]["name"];
 					}else{
-						$data['avatar'] = 'noimage.png';
+						$data['profilepic'] = 'noimage.png';
 					}
 					//Register User
 					if($user->register($data)){

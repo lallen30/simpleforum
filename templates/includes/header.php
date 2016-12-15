@@ -6,10 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
+
     <title>My Simple forum</title>
 
     <!-- Bootstrap core CSS -->
     <link href="<?php echo BASE_URI; ?>templates/css/bootstrap.css" rel="stylesheet">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="<?php echo BASE_URI; ?>templates/js/bootstrap.js"></script>
+    <script src="<?php echo BASE_URI; ?>templates/js/ckeditor/ckeditor.js"></script>
 
     <!-- Custom styles for this template -->
     <link href="<?php echo BASE_URI; ?>templates/css/custom.css" rel="stylesheet">
@@ -37,8 +43,11 @@
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
             <li class="active"><a href="index.php">Home</a></li>
+        <?php if(!isLoggedIn()) : ?>
             <li><a href="register.php">Create An Account</a></li>
+        <?php else : ?>
             <li><a href="create.php">Create post</a></li>
+        <?php endif; ?>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
